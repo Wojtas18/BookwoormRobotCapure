@@ -3,7 +3,7 @@ package com.academy.BookwormRobot;
 import org.apache.log4j.Logger;
 
 /**
- * Hello world!
+ * Main class
  *
  */
 public class App 
@@ -12,10 +12,7 @@ public class App
 	
     public static void main( String[] args )
     {
-        logger.info("Hello!");
-        logger.warn("Warning!");
-        logger.error("Ojej error");
-        logger.debug("Debugujemy");
-        logger.fatal("Bardzo niedobrze");
+        logger.info("Hello! Bookworm Robot is starting his job!");
+
     }
 }
