@@ -6,14 +6,11 @@ public abstract class BookShop {
 	
 	protected String url;
 	protected Logger logger;
-	protected String titleElement;
-	protected String descrElement;
+
 	
-	public BookShop(String url, Logger logger, String titleElement, String descrElement) {
+	public BookShop(String url, Logger logger) {
 		this.url = url;
 		this.logger = logger;
-		this.titleElement = titleElement;
-		this.descrElement = descrElement;
 	}
 	
 	public abstract String getTitleOfDiscountedBook();

@@ -7,8 +7,10 @@ import com.jaunt.JauntException;
 import com.jaunt.UserAgent;
 
 public class HtmlUtils {
+	private final static Logger logger = Logger.getLogger(HtmlUtils.class);
+
 	
-	public static String getHtmlContent(String url, Logger logger) {
+	public static String getHtmlContent(String url) {
 		String innerHtml = null;
 		try {
 			UserAgent userAgent = new UserAgent();
@@ -20,7 +22,7 @@ public class HtmlUtils {
 		return innerHtml;
 	}
 	
-	public static String getInnerContent(String element, String url, Logger logger) {
+	public static String getInnerContent(String element, String url) {
 		Element innerHtml = null;
 		try {
 			UserAgent userAgent = new UserAgent();
@@ -30,10 +32,6 @@ public class HtmlUtils {
 			logger.error(e.getMessage());
 		}
 		
-		if (innerHtml.innerText() != null ) {
-			logger.info(innerHtml.innerText());
-		}
 		return innerHtml.innerText();
 	}
-
 }
