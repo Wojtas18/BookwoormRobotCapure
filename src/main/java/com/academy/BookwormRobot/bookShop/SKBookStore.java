@@ -20,7 +20,8 @@ public class SKBookStore extends BookShop {
 	@Override
 	public String getTitleOfDiscountedBook() {
 		String title = HtmlUtils.getInnerContent(titleDivName, URL);
-		logger.info(title);
+		String s1 = title.replaceAll("\\s"," ");
+		logger.info(s1);
 		return title;
 	}
 

@@ -21,14 +21,17 @@ public class HelionBookShop extends BookShop {
 	@Override
 	public String getTitleOfDiscountedBook() {
 		String title = HtmlUtils.getInnerContent(titleDivName, url);
-		logger.info(title);
+		String s1 = title.replaceAll("\\s"," ");
+		logger.info(s1);
 		return title;
 	}
 
 	@Override
 	public String getDescritpionOfDiscountedBook() {
 		String descr = HtmlUtils.getInnerContent(descrDivName, url);
-		logger.info(descr);
+		String s1 = descr.replaceAll("\\s"," ");
+		logger.info(s1);
+
 		return descr;
 	}
 
