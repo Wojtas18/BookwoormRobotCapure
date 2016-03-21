@@ -8,6 +8,10 @@ public abstract class BookShop {
 		this.url = url;
 	}
 	
-	public abstract String printHtmlContent();
+	public abstract String getHtmlContent();
+
+	public abstract String getTitleOfDiscountedBook();
+	
+	public abstract String getDescritpionOfDiscountedBook();
 	
 }
