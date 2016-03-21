@@ -1,15 +1,21 @@
 package com.academy.BookwormRobot.bookShop;
 
-public abstract class BookShop {
+import org.apache.log4j.Logger;
 
-	protected String url;
+public abstract class BookShop {
 	
-	public BookShop(String url) {
+	protected String url;
+	protected Logger logger;
+	protected String titleElement;
+	protected String descrElement;
+	
+	public BookShop(String url, Logger logger, String titleElement, String descrElement) {
 		this.url = url;
+		this.logger = logger;
+		this.titleElement = titleElement;
+		this.descrElement = descrElement;
 	}
 	
-	public abstract String getHtmlContent();
-
 	public abstract String getTitleOfDiscountedBook();
 	
 	public abstract String getDescritpionOfDiscountedBook();
