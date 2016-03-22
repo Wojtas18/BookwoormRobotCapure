@@ -2,6 +2,7 @@ package com.academy.BookwormRobot.bookShop;
 
 import org.apache.log4j.Logger;
 
+import com.academy.BookwormRobot.enums.BookShopTypes;
 import com.academy.BookwormRobot.utils.HtmlUtils;
 
 public class HelionBookShop extends BookShop {
@@ -18,7 +19,7 @@ public class HelionBookShop extends BookShop {
 		super(URL, logger);
 	}
 
-	@Override
+
 	public String getTitleOfDiscountedBook() {
 		String title = HtmlUtils.getInnerContent(titleDivName, url);
 		String s1 = title.replaceAll("\\s"," ");
@@ -26,13 +27,24 @@ public class HelionBookShop extends BookShop {
 		return title;
 	}
 
-	@Override
+
 	public String getDescritpionOfDiscountedBook() {
 		String descr = HtmlUtils.getInnerContent(descrDivName, url);
 		String s1 = descr.replaceAll("\\s"," ");
 		logger.info(s1);
 
 		return descr;
+	}
+	
+	public int getType() {
+		return BookShopTypes.helion.getType();
+	}
+
+
+	@Override
+	public void getInfoOfDiscountedBook() {
+		getTitleOfDiscountedBook();
+		getDescritpionOfDiscountedBook();
 	}
 
 }

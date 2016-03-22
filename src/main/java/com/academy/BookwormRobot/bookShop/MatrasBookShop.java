@@ -17,15 +17,9 @@ public class MatrasBookShop extends BookShop {
 	}
 
 	@Override
-	public String getTitleOfDiscountedBook() {
-		//System.out.println(HtmlUtils.getHtmlContent(URL));
-		//logger.info(title);
-		return null;
+	public void getInfoOfDiscountedBook() {
+		// TODO Auto-generated method stub
+		
 	}
 
-	@Override
-	public String getDescritpionOfDiscountedBook() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }

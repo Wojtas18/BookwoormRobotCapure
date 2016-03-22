@@ -2,6 +2,7 @@ package com.academy.BookwormRobot.bookShop;
 
 import org.apache.log4j.Logger;
 
+import com.academy.BookwormRobot.enums.BookShopTypes;
 import com.academy.BookwormRobot.utils.HtmlUtils;
 
 public class GKNBookShop extends BookShop {
@@ -16,8 +17,7 @@ public class GKNBookShop extends BookShop {
 	public GKNBookShop() {
 		super(URL, logger);
 	}
-
-	@Override
+	
 	public String getTitleOfDiscountedBook() {
 		String title = HtmlUtils.getInnerContent(titleDivName, URL);
 		String s1 = title.replaceAll("\\s"," ");
@@ -25,10 +25,13 @@ public class GKNBookShop extends BookShop {
 		return title;
 	}
 
+	public int getType() {
+		return BookShopTypes.glownaKsiegarniaNaukowa.getType();
+	}
+
 	@Override
-	public String getDescritpionOfDiscountedBook() {
-		// TODO Auto-generated method stub
-		return null;
+	public void getInfoOfDiscountedBook() {
+		getTitleOfDiscountedBook();
 	}
 
 }
