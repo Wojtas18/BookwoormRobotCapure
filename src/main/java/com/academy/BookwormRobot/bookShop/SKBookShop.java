@@ -24,8 +24,7 @@ public class SKBookShop extends BookShop {
 		String s1 = title.replaceAll("Pobierz e-book:", "").replaceAll("pobierz EPUB", "")
 				.replaceAll("pobierz MOBI", "").replaceAll(" {2,}", "").replaceAll("[\n\r]", " ")
 				.replaceAll("\\s+\\s+\\s+", ", ").replaceFirst(",", "").replaceAll("  ", ": ").trim();
-		logger.info(s1);
-		return title;
+		return s1;
 	}
 
 	public int getType() {
@@ -37,7 +36,7 @@ public class SKBookShop extends BookShop {
 		if (StringUtils.isNullOrEmpty(getTitleOfDiscountedBook())) {
 			logger.error("Nie mozna pobrac informacji o ksiazce!");
 		} else {
-			getTitleOfDiscountedBook();
+			logger.info(getTitleOfDiscountedBook());
 		}
 	}
 

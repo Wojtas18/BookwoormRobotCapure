@@ -21,8 +21,7 @@ public class GKNBookShop extends BookShop {
 	public String getTitleOfDiscountedBook() {
 		String title = HtmlUtils.getInnerContent(titleDivName, URL);
 		String s1 = title.replaceAll("\\s", " ").trim().replaceAll("cena.*?\\s+\\s+\\s+", "");
-		logger.info(s1);
-		return title;
+		return s1;
 	}
 
 	public int getType() {
@@ -34,7 +33,7 @@ public class GKNBookShop extends BookShop {
 		if (StringUtils.isNullOrEmpty(getTitleOfDiscountedBook())) {
 			logger.error("Nie mozna pobrac informacji o ksiazce!");
 		} else {
-			getTitleOfDiscountedBook();
+			logger.info(getTitleOfDiscountedBook());
 		}
 	}
 

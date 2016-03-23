@@ -23,16 +23,13 @@ public class HelionBookShop extends BookShop {
 	public String getTitleOfDiscountedBook() {
 		String title = HtmlUtils.getInnerContent(titleDivName, url);
 		String s1 = title.replaceAll("\\s", " ");
-		logger.info(s1);
-		return title;
+		return s1;
 	}
 
 	public String getDescritpionOfDiscountedBook() {
 		String descr = HtmlUtils.getInnerContent(descrDivName, url);
 		String s1 = descr.replaceAll("\\s", " ").replaceAll("\\s+\\s+", "").trim();
-		logger.info(s1);
-
-		return descr;
+		return s1;
 	}
 
 	public int getType() {
@@ -45,8 +42,8 @@ public class HelionBookShop extends BookShop {
 				|| StringUtils.isNullOrEmpty(getDescritpionOfDiscountedBook())) {
 			logger.error("Nie mozna pobrac informacji o ksiazce");
 		} else {
-			getTitleOfDiscountedBook();
-			getDescritpionOfDiscountedBook();
+			logger.info(getTitleOfDiscountedBook());
+			logger.info(getDescritpionOfDiscountedBook());
 		}
 
 	}
