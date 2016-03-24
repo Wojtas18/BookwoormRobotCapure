@@ -61,8 +61,7 @@ public class HelionBookShop extends BookShop {
 				|| StringUtils.isNullOrEmpty(getDescritpionOfDiscountedBook())) {
 			logger.error("Nie mozna pobrac informacji o ksiazce");
 		} else {
-			logger.info(getTitleOfDiscountedBook());
-			logger.info(getDescritpionOfDiscountedBook());
+			logger.info("Tytul:" + getTitleOfDiscountedBook() + "\nOpis: " + getDescritpionOfDiscountedBook() + "\n");
 		}
 
 	}

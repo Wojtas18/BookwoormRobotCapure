@@ -46,7 +46,7 @@ public class GKNBookShop extends BookShop {
 		if (StringUtils.isNullOrEmpty(getTitleOfDiscountedBook())) {
 			logger.error("Nie mozna pobrac informacji o ksiazce!");
 		} else {
-			logger.info(getTitleOfDiscountedBook());
+			logger.info(getTitleOfDiscountedBook() + "\n");
 		}
 	}
 
