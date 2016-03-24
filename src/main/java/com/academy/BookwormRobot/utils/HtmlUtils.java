@@ -6,10 +6,19 @@ import com.jaunt.Element;
 import com.jaunt.JauntException;
 import com.jaunt.UserAgent;
 
+/**
+ * Some usefull methods used in get HTML content
+ * @author Paulina
+ *
+ */
 public class HtmlUtils {
 	private final static Logger logger = Logger.getLogger(HtmlUtils.class);
 
-	
+	/**
+	 * Just simply getting HTML content
+	 * @param url
+	 * @return
+	 */
 	public static String getHtmlContent(String url) {
 		String innerHtml = null;
 		try {
@@ -22,6 +31,12 @@ public class HtmlUtils {
 		return innerHtml;
 	}
 	
+	/**
+	 * Getting content of first selected HTML tag(element) 
+	 * @param element
+	 * @param url
+	 * @return
+	 */
 	public static String getInnerContent(String element, String url) {
 		Element innerHtml = null;
 		try {

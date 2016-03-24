@@ -7,6 +7,12 @@ import com.academy.BookwormRobot.enums.BookShopTypes;
 import com.academy.BookwormRobot.utils.HtmlUtils;
 import com.academy.BookwormRobot.utils.StringUtils;
 
+/**
+ * Swiat Ksiazki book shop
+ * 
+ * @author Paulina
+ *
+ */
 public class SKBookShop extends BookShop {
 
 	private final static Logger logger = Logger.getLogger(SKBookShop.class);
@@ -19,6 +25,12 @@ public class SKBookShop extends BookShop {
 		super(URL, logger);
 	}
 
+	/**
+	 * Gets title and additional info from default div name. In addition it
+	 * removes all unnecessary signs from it.
+	 * 
+	 * @return
+	 */
 	public String getTitleOfDiscountedBook() {
 		String title = HtmlUtils.getInnerContent(titleDivName, URL);
 		String s1 = title.replaceAll("Pobierz e-book:", "").replaceAll("pobierz EPUB", "")
@@ -27,6 +39,7 @@ public class SKBookShop extends BookShop {
 		return s1;
 	}
 
+	@Override
 	public int getType() {
 		return BookShopTypes.swiatKsiazki.getType();
 	}

@@ -1,11 +1,19 @@
 package com.academy.BookwormRobot.enums;
 
+/**
+ * Enum which keeps kinds of book shops
+ * @author Paulina
+ *
+ */
 public enum BookShopTypes {
 
 	helion(1),
 	glownaKsiegarniaNaukowa(2),
 	swiatKsiazki(3);
 	
+	/**
+	 * It's like helper value
+	 */
 	private int type;
 
 	private BookShopTypes(int type) {

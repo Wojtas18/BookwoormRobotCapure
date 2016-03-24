@@ -6,6 +6,12 @@ import com.academy.BookwormRobot.enums.BookShopTypes;
 import com.academy.BookwormRobot.utils.HtmlUtils;
 import com.academy.BookwormRobot.utils.StringUtils;
 
+/**
+ * Glowna Ksiegarnia Naukowa book shop
+ * 
+ * @author Paulina
+ *
+ */
 public class GKNBookShop extends BookShop {
 
 	private final static Logger logger = Logger.getLogger(GKNBookShop.class);
@@ -18,12 +24,19 @@ public class GKNBookShop extends BookShop {
 		super(URL, logger);
 	}
 
+	/**
+	 * Method which downloads title and additional info from default div name.
+	 * In addition we need to remove unnecessary signs from it.
+	 * 
+	 * @return
+	 */
 	public String getTitleOfDiscountedBook() {
 		String title = HtmlUtils.getInnerContent(titleDivName, URL);
 		String s1 = title.replaceAll("\\s", " ").trim().replaceAll("cena.*?\\s+\\s+\\s+", "");
 		return s1;
 	}
 
+	@Override
 	public int getType() {
 		return BookShopTypes.glownaKsiegarniaNaukowa.getType();
 	}
