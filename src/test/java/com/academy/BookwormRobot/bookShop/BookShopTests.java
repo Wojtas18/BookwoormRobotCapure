@@ -5,7 +5,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.Test;
 
 /**
- * Some tests wchich checks if the content is downloaded correctly
+ * Some tests which checks if the content is downloaded correctly
  * 
  * @author Paulina
  *
