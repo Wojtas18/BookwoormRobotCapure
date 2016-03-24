@@ -35,7 +35,7 @@ public class SKBookShop extends BookShop {
 		String title = HtmlUtils.getInnerContent(titleDivName, URL);
 		String s1 = title.replaceAll("Pobierz e-book:", "").replaceAll("pobierz EPUB", "")
 				.replaceAll("pobierz MOBI", "").replaceAll(" {2,}", "").replaceAll("[\n\r]", " ")
-				.replaceAll("\\s+\\s+\\s+", ", ").replaceFirst(",", "").replaceAll("  ", ": ").trim();
+				.replaceAll("\\s+\\s+\\s+", "\n").replaceFirst(",", "").replaceAll("  ", ": ").trim();
 		return s1;
 	}
 
