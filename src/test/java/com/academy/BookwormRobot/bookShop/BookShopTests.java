@@ -44,4 +44,11 @@ public class BookShopTests {
 		// System.out.println(title);
 	}
 
+	@Test
+	public void testOfGettingBookInfoFromSelkar() {
+		SelkarBookShop selkar = new SelkarBookShop();
+		String info = selkar.getTitleAndBrandOfDiscountedBooks();
+		assertThat(info).isNotNull();
+		// System.out.println(info);
+	}
 }

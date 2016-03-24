@@ -9,7 +9,8 @@ public enum BookShopTypes {
 
 	helion(1),
 	glownaKsiegarniaNaukowa(2),
-	swiatKsiazki(3);
+	swiatKsiazki(3),
+	selkar(4);
 	
 	/**
 	 * It's like helper value
