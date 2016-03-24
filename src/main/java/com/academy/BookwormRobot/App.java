@@ -23,7 +23,7 @@ public class App {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		logger.info("Hello! Bookworm Robot is starting his job!\n");
+		logger.info("Hello! Bookworm Robot is starting his job! \n\n");
 		BookShop bs = null;
 		for (int i = 0; i < args.length; i++) {
 			if (Integer.parseInt(args[i]) == BookShopTypes.glownaKsiegarniaNaukowa.getType()) {
