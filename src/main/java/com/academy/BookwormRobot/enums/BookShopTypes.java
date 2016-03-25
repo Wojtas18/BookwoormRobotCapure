@@ -2,16 +2,14 @@ package com.academy.BookwormRobot.enums;
 
 /**
  * Enum which keeps kinds of book shops
+ * 
  * @author Paulina
  *
  */
 public enum BookShopTypes {
 
-	helion(1),
-	glownaKsiegarniaNaukowa(2),
-	swiatKsiazki(3),
-	selkar(4);
-	
+	helion(1), glownaKsiegarniaNaukowa(2), swiatKsiazki(3), selkar(4);
+
 	/**
 	 * It's like helper value
 	 */
@@ -28,6 +26,5 @@ public enum BookShopTypes {
 	public void setType(int type) {
 		this.type = type;
 	}
-	
-	
+
 }
